@@ -4,10 +4,12 @@ const bodyParser = require('body-parser');  // faz o parse no corpo da requisica
 const express = require('express');         // 
 const server = express();                   // instanciando um novo servidor express 
 const allowCors = require('./cors');
+// const queryParser = require('express-query-int');
 
 server.use(bodyParser.urlencoded({ extended: true }));  // interpetra mais dados que o urlencoded faz
 server.use(bodyParser.json());                          // parse quando o corpo da requisicao for json
 server.use(allowCors);
+// server.use(queryParser);
 
 server.listen(port, function() {
   console.log(`BACKEND is running on port ${port}.`);
