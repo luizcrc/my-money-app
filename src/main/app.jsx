@@ -1,12 +1,19 @@
-import 'admin-lte/plugins/jQuery/jquery-2.2.3.min.js';
 import '../common/template/dependencies';
 import React, { Component } from 'react';
+
+import Header from '../common/template/header';
+import SideBar from '../common/template/sideBar';
+import Footer from '../common/template/footer';
 
 class App extends Component {
   render() {
     return (
       <div className="wrapper">
-        <h1 className="App-title">Welcome to React</h1>
+        <Header />
+        <SideBar />
+        <div className='content-wrapper'>
+        </div>
+        <Footer />
       </div>
     );
   }
